@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./indexstyl.css">
+    <title>Forming By PADDI </title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="boxe">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                <ul class="nav-items">
+                    <li class="nav-item"><a href="./index.html">Home</a></li>
+                    <li class="nav-item"><a href="./about.html">About</a></li>
+                    <li class="nav-item"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1 class="lg-heading text-light" contenteditable="true">sabji wala</h1>
+            <p class="text-light">sabji sidhe khet se <br> direct from formers fields</p>
+            <section>
+                <h2>Get Here <span class="change-content"></span></h2>
+            </section>
+            <div class="button1">
+                <a href="./fruite.html" class="dec-a">
+                    Explore vegitables and fruites
+                    <span class="color2"></span>
+                    <span class="color1"></span>
+                    <span class="color2"></span>
+                    <span class="color1"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="showcase" id="explore-places">
+        <div class="container">
+            <div class="row row1">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Dumbull Image">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black">fruites here</h2>
+                    <p class="text-gray">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam deleniti
+                        totam dolores voluptates. Rerum ea debitis molestiae quisquam illo obcaecati, tempora fugiat
+                        possimus voluptatibus laudantium explicabo quaerat saepe aliquam perspiciatis.</p>
+                    <a href="./fruite.html" class="btn btn-secondary btn-hover">MORE</a>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1486328228599-85db4443971f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Nature image for you">
+                </div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black">vegitables</h2>
+                    <p class="text-gray">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, a molestiae
+                        debitis modi nesciunt aperiam ad praesentium et quas voluptatibus voluptatum veniam, distinctio
+                        tempora sed exercitationem maxime excepturi porro laborum.</p>
+                    <a href="./vegitable.html" class="btn btn-secondary btn-hover">More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature">
+        <div class="container">
+            <div class="box-wrapper">
+                <div class="box box-1">
+                    <h3 class="md-heading">Fresh and healthy</h3><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet illo vero nobis necessitatibus,
+                        earum dicta iusto atque explicabo assumenda. Consequuntur.</p>
+                </div>
+                <div class="box box-2">
+                    <h3 class="md-heading">Less Price</h3><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet illo vero nobis necessitatibus,
+                        earum dicta iusto atque explicabo assumenda. Consequuntur.</p>
+                </div>
+                <div class="box box-3">
+                    <h3 class="md-heading">Organic</h3><br>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet illo vero nobis necessitatibus,
+                        earum dicta iusto atque explicabo assumenda. Consequuntur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social-media-link">
+            <i>Facebook</i>
+            <i>Twitter</i>
+            <i>Instagram</i>
+        </div>
+        <p>World Travel &copy; 2020, All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.querySelector('body').addEventListener('mousemove', eyeball);
+    function eyeball() {
+        let eye = document.querySelectorAll('.eye');
+        eye.forEach(function (eye) {
+            let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+
+            let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+
+            let radian = Math.atan2(event.pageX - x, event.pageY - y);
+            let rotate = (radian * (180 / Math.PI) * -1) + 270;
+            eye.style.transform = "rotate(" + rotate + "deg)"
+        });
+    }
+</script>
